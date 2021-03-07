@@ -16,7 +16,9 @@
     </script>
 
     <!--Basic canvas viewer-->
-    <img id="canvasView" src="" width="600" height="600">
+    <p style="text-align:center;">
+        <img id="canvasView" src="" alt="canvasView" width="600" height="600">
+    </p>
     <h1 id="timestampView"></h1>
     <script>
         const queryPostsByDate = db.collection("posts").orderBy("timestamp", "desc");
