@@ -21,7 +21,7 @@
     <script>
         const queryPostsByDate = db.collection("posts").orderBy("timestamp", "desc");
         queryPostsByDate.limit(1).get().then((query) => {
-            const postData = query[0].data();
+            const postData = query.docs[0].data();
             document.getElementById("timestampView").innerHTML = `Uploaded on ${postData.timestamp.toDate().toLocaleString()} at ${postData.timestamp.toDate().toLocaleTimeString()}`;
             document.getElementById("canvasView").src = postData.imgUrl;
         })
