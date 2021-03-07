@@ -143,14 +143,12 @@
         });
     </script>
 
-    <!--Get Firestore database-->
-    <script>
-        const db = firebase.firestore();
-    </script>
     <!--Basic canvas viewer-->
     <img id="canvasView" src="" width="600" height="600">
     <h1 id="timestampView"></h1>
-    <script>
+    <script defer>
+        const db = firebase.firestore();
+
         const queryPostsByDate = db.collection("posts").orderBy("timestamp", desc);
         queryPostsByDate.limit(1).get().then((query) => {
             const postData = query[0].data();
