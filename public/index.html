@@ -17,8 +17,13 @@
 
     <!--Basic canvas viewer-->
     <p style="text-align:center;">
-        <img id="canvasView" src="" alt="canvasView" width="600" height="600">
+        <img id="canvasView" src="" alt="canvasView" width="600" height="600"> <img id="editsView" src="https://via.placeholder.com/300x600" alt="editsView" width"300" height="600">
     </p>
+    
+    <p style="text-align:center;">
+        <img id="xButton" src="https://via.placeholder.com/100x50" alt="xButton" width="100" height="50"> <img id="editButton" src="https://via.placeholder.com/100x50" alt="editButton" width="100" height="50">
+    </p>
+    
     <h1 id="timestampView"></h1>
     <script>
         const queryPostsByDate = db.collection("posts").orderBy("timestamp", "desc");
